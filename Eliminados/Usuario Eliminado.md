@@ -1,15 +1,17 @@
-> [!Usuario Borrado] Usuario eliminado.
+> Usuario eliminado.
 #### Herramientas:
 * [ADRestore.exe](https://learn.microsoft.com/en-us/sysinternals/downloads/adrestore)
 * [TheITBros](https://theitbros.com/restore-deleted-active-directory-user/)
 
-![[Usuarioelimminado.png]]
+<img width="900" height="500" alt="Usuarioelimminado" src="https://github.com/user-attachments/assets/ef75dd45-2378-4d44-8cd7-7037bec916bc" />
 
 Para el caso que se muestra a continuacion, consideraremos que obtuvimos un archivo excel protegido con una contrasena, la cual se ha descifrado, resultando en:
 
 | User       | Job Title                      | Permissions             | Notes                                                                 |
 | ---------- | ------------------------------ | ----------------------- | --------------------------------------------------------------------- |
 | Todd.Wolfe | Second-Line Support Technician | Remote Management Users | Leaver. Password was reset to NightT1meP1dg3on14 and account deleted. |
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
 Cada vez que un usuario dentro de AD es eliminado puede ser reestablecido siempre y cuando se encuentre dentro del periodo de tiempo establecido dentro de su configuracion (180 dias por defecto). Durante este periodo de tiempo, los usuario eiminados son colocados dentro del contenedor **Deleted Objects** y su atributo **isDeleted** es configurado a **True**. El periodo de retencion se encuentra configurado por el atributo **tombstoneLifetime (TSL)**. Comencemos:
 
 1) Revisaremos el valor configurado en el atributo **TSL** utilizando **powershell**.
@@ -99,6 +101,4 @@ Get-ADUser -Identity 1c6b1deb-c372-4cbb-87b1-15031de169db
 
 Suponiendo que conocemos la contrasena del usuario **Todd Wolfe** y que hemos llegado a este punto, debe de ser posible para nosotros el poder utiizar herramientas como **Runas.exe** o **Invoke-RunasCs.ps1** en busca de lograr una escalacion de privilegios.
 
-
-![[UsuarioReestablecido.png]]
-
+<img width="1100" height="500" alt="UsuarioReestablecido" src="https://github.com/user-attachments/assets/2ec70ff3-68b4-44bf-bef5-2712fe17cff1" />

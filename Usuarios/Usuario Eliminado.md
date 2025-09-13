@@ -3,8 +3,7 @@
 * [ADRestore.exe](https://learn.microsoft.com/en-us/sysinternals/downloads/adrestore)
 * [TheITBros](https://theitbros.com/restore-deleted-active-directory-user/)
 
-<img width="975" height="586" alt="Usuarioelimminado" src="https://github.com/user-attachments/assets/20bcac63-929b-4e34-9d2d-f5c60537cc31" />
-
+<img width="900" height="500" alt="Usuarioelimminado" src="https://github.com/user-attachments/assets/20bcac63-929b-4e34-9d2d-f5c60537cc31" />
 
 Para el caso que se muestra a continuacion, consideraremos que obtuvimos un archivo excel protegido con una contrasena, la cual se ha descifrado, resultando en:
 
@@ -102,6 +101,5 @@ Get-ADUser -Identity 1c6b1deb-c372-4cbb-87b1-15031de169db
 
 Suponiendo que conocemos la contrasena del usuario **Todd Wolfe** y que hemos llegado a este punto, debe de ser posible para nosotros el poder utiizar herramientas como **Runas.exe** o **Invoke-RunasCs.ps1** en busca de lograr una escalacion de privilegios.
 
-
-[UsuarioReestablecido.png]
+<img width="1100" height="500" alt="UsuarioReestablecido" src="https://github.com/user-attachments/assets/6bf7d1e0-50c3-4d60-a477-b5b7a8a7c5a5" />
 

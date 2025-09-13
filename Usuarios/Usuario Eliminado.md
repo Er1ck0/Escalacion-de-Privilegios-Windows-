@@ -3,7 +3,8 @@
 * [ADRestore.exe](https://learn.microsoft.com/en-us/sysinternals/downloads/adrestore)
 * [TheITBros](https://theitbros.com/restore-deleted-active-directory-user/)
 
-[[Usuarioelimminado.png]]
+<img width="975" height="586" alt="Usuarioelimminado" src="https://github.com/user-attachments/assets/20bcac63-929b-4e34-9d2d-f5c60537cc31" />
+
 
 Para el caso que se muestra a continuacion, consideraremos que obtuvimos un archivo excel protegido con una contrasena, la cual se ha descifrado, resultando en:
 

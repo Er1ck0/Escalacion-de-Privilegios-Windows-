@@ -1,4 +1,4 @@
-> [!Usuario Borrado] Usuario eliminado.
+> Usuario eliminado.
 #### Herramientas:
 * [ADRestore.exe](https://learn.microsoft.com/en-us/sysinternals/downloads/adrestore)
 * [TheITBros](https://theitbros.com/restore-deleted-active-directory-user/)

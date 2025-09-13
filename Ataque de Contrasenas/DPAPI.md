@@ -1,5 +1,4 @@
 
-> [!DPAPI] DPAPI
 > Data Protection API (DPAPI) es un metodo utilizado por sistemas windows para el cifrado simetrico de llaves privada asimetricas. Simplifica el cifrado para los desarrolladores permitiendoles cifrar datos utilizando una llave derivada de los secretos de inicio de sesion del usuario.
 
 Existen varios metodos y herramientas para la extraccion y descifrado de claves dentro de DPAPI. Sin embargo, es importante considerar lo siguiente:
@@ -9,15 +8,15 @@ Existen varios metodos y herramientas para la extraccion y descifrado de claves 
 - Combinando **SID** y **GUID** obtenemos la ruta de la llave maestra:
 	- C:\PATH\TO\MASTER\KEY\\**{SID}**\\**{GUID}** 
 
->[!Fuentes] Fuentes
+>Fuentes
 >[infosecwriteups](https://infosecwriteups.com/decrypting-dpapi-credentials-offline-8c8f27207956)
 >[Credential Hunting DPAPI](https://htb.linuxsec.org/active-directory/credential-hunting/dpapi)
 >[TLDR bins](https://tldrbins.github.io/dpapi/)
 
->[!Escenario] Escenario  
+>Escenario  
 >Consideraremos el escenario de la maquina voleur de HTB. En esta maquina/escenario ya contamos con las credenciales **todd.wolfe:NightT1meP1dg3on14**. Obtendremos credenciales del usuario **jeremy.combs** por medio de credenciales almacenadas en DPAPI.
 
->[!Enumeracion] Enumeracion de credenciales DPAPI.
+>Enumeracion de credenciales DPAPI.
 
 Archivos protegidos se encuentran usualmente ubicados en:
 - C:\Users\username\AppData\Roaming\Microsoft\Protect\*
@@ -71,7 +70,7 @@ PS:> Get-ChildItem -Force C:\IT\Second-Line Support\Archived Users\todd.wolfe\Ap
 
 Llegando a este punto, ya es posible que descifremos los archivos y obtengamos credenciales en texto claro.
 
->[!impacket-dpapi] Descifrando contrasenas con  impacket-dpapi
+>Descifrando contrasenas con  impacket-dpapi
 
 *Nota: En caso de optar por obtener el valor Base64 de los archivos y decifrarlos en nuestra maquina loca, tener en cuenta que en ocasiones no funciona este metodo.*
 
